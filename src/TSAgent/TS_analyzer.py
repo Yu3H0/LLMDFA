@@ -320,7 +320,7 @@ class TSAnalyzer:
             else_branch_end_line = 0
             block_num = 0
             for sub_target in target.children:
-                if sub_target.type == "parenthesized_expression":
+                if sub_target.type == "condition":
                     condition_line = (
                         source_code[: sub_target.start_byte].count("\n") + 1
                     )
